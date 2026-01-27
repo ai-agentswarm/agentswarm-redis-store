@@ -78,3 +78,26 @@ config = store.to_dict() # Returns {"recreate_from_env": True}
 # On a remote machine (with its own REDIS_HOST env var)
 remote_store = RedisStore.recreate(config)
 ```
+
+## Integration with Agentswarm
+
+You can use the `RedisStore` as the backend for the `agentswarm.Context`:
+
+```python
+from agentswarm.redis.store import RedisStore
+from agentswarm.datamodels.context import Context
+
+# 1. Initialize the store (e.g., from environment)
+store = RedisStore.from_env()
+
+# 2. Inject into the Context
+context = Context(
+    trace_id="my-unique-trace",
+    messages=[],
+    store=store,
+    tracing=my_tracing_instance
+)
+
+# 3. Use as usual
+context.store.set("key", "value")
+```
