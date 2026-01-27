@@ -12,6 +12,14 @@ This project focuses on secure Redis connections. It supports:
 ## Installation
 
 ```bash
+pip install agentswarm-redis-store
+```
+
+### Local Development
+
+If you are working on the source code:
+
+```bash
 # Clone the repository
 cd agentswarm-redis-store
 
@@ -19,7 +27,7 @@ cd agentswarm-redis-store
 python3 -m venv venv
 source venv/bin/activate
 
-# Install dependencies
+# Install in editable mode
 pip install -e .
 ```
 
