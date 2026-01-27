@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentswarm-redis-store"
+version = "0.1.0"
+description = "Redis implementation of the Store interface for ai-agentswarm."
+readme = "README.md"
+authors = [
+  { name = "Lucas Roverelli", email = "lucas.roverelli@gmail.com" },
+]
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "redis>=5.0.0",
+    "pydantic>=2.0.0"
+]
+keywords = ["ai", "agents", "redis", "store", "persistence"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "fakeredis",
+    "twine",
+    "build",
+    "black",
+    "isort"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ai-agentswarm/agentswarm-redis-store"
+"Bug Tracker" = "https://github.com/ai-agentswarm/agentswarm-redis-store/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
