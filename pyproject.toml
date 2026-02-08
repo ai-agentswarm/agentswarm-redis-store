@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Redis implementation of the Store interface for ai-agentswarm."
 readme = "README.md"
 authors = [
-  { name = "Lucas Roverelli", email = "lucas.roverelli@gmail.com" },
+  { name = "Luca Roverelli", email = "luca.roverelli@gmail.com" },
 ]
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
